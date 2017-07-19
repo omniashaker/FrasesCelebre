@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+<h:head>
+<title>Insertar frases</title>
+</h:head>
+<h:body>
+<f:view>
+<h:form>
+<table>
+<tr>
+<td> <h:messages showDetail="true" /> </td>
+</tr>
+<tr>
+<td><h:outputText value="Nombre autor : " /></td>
+<td><h:inputText value="#{viewManager.a.nombre}" /></td>
+</tr>
+<tr>
+<td><h:outputText value="Fecha de nacimiento : "/></td>
+<td><h:inputText value="#{viewManager.a.fechaNac}" /></td>
+</tr>
+<tr>
+<td><h:outputText value="categorias : "/></td>
+<td><h:inputText value="#{viewManager.fselect.categoria}"/></td>
+</tr>
+<tr>
+<td><h:outputText value="frase: "/></td>
+<td><h:inputText value="#{viewManager.fselect.frase}"/></td>
+<!--<p:inputTextarea rows="5" cols="30" counter="display" autoResize="false"value="#{viewManager.fselect.frase}"></p:inputTextarea>-->
+</tr>
+<tr>
+<td></td>
+<td><h:commandButton value="Insertar" type="submit"  action="#{viewManager.add}"/></td>
+</tr>
+</table>
+</h:form>
+</f:view>
+</h:body>
+</html>

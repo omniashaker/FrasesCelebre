@@ -1,0 +1,221 @@
+jun 18, 2017 10:24:41 PM org.apache.catalina.core.AprLifecycleListener init
+INFORMACIÓN: La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+jun 18, 2017 10:24:42 PM org.apache.coyote.AbstractProtocol init
+INFORMACIÓN: Initializing ProtocolHandler ["http-bio-8080"]
+jun 18, 2017 10:24:42 PM org.apache.coyote.AbstractProtocol init
+GRAVE: Failed to initialize end point associated with ProtocolHandler ["http-bio-8080"]
+java.net.BindException: La dirección ya se está usando (Bind failed) <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:411)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:646)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:821)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:638)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:280)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:454)
+Caused by: java.net.BindException: La dirección ya se está usando (Bind failed)
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:181)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:49)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:398)
+	... 17 more
+
+jun 18, 2017 10:24:42 PM org.apache.catalina.core.StandardService initInternal
+GRAVE: No pude inicializar el conector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:821)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:638)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:280)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:454)
+Caused by: org.apache.catalina.LifecycleException: Falló la inicialización del manejador de protocolo
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: La dirección ya se está usando (Bind failed) <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:411)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:646)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	... 13 more
+Caused by: java.net.BindException: La dirección ya se está usando (Bind failed)
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:181)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:49)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:398)
+	... 17 more
+
+jun 18, 2017 10:24:42 PM org.apache.coyote.AbstractProtocol init
+INFORMACIÓN: Initializing ProtocolHandler ["ajp-bio-8009"]
+jun 18, 2017 10:24:43 PM org.apache.openejb.util.OptionsLog info
+INFORMACIÓN: Using 'tomee.remote.support=true'
+jun 18, 2017 10:24:43 PM org.apache.openejb.util.OptionsLog info
+INFORMACIÓN: Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+jun 18, 2017 10:24:43 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: ********************************************************************************
+jun 18, 2017 10:24:43 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: OpenEJB http://openejb.apache.org/
+jun 18, 2017 10:24:43 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Startup: Sun Jun 18 22:24:43 CEST 2017
+jun 18, 2017 10:24:43 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Copyright 1999-2013 (C) Apache OpenEJB Project, All Rights Reserved.
+jun 18, 2017 10:24:43 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Version: 4.7.1
+jun 18, 2017 10:24:43 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Build date: 20140912
+jun 18, 2017 10:24:43 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: Build time: 01:43
+jun 18, 2017 10:24:43 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: ********************************************************************************
+jun 18, 2017 10:24:43 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: openejb.home = /home/islam/Escritorio/frasesCelebre3/target/apache-tomee
+jun 18, 2017 10:24:43 PM org.apache.openejb.OpenEJB$Instance <init>
+INFORMACIÓN: openejb.base = /home/islam/Escritorio/frasesCelebre3/target/apache-tomee
+jun 18, 2017 10:24:43 PM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFORMACIÓN: Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@35fc6dc4
+jun 18, 2017 10:24:43 PM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFORMACIÓN: Succeeded in installing singleton service
+jun 18, 2017 10:24:43 PM org.apache.openejb.config.ConfigurationFactory init
+INFORMACIÓN: openejb configuration file is '/home/islam/Escritorio/frasesCelebre3/target/apache-tomee/conf/tomee.xml'
+jun 18, 2017 10:24:43 PM org.apache.openejb.config.ConfigurationFactory configureService
+INFORMACIÓN: Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+jun 18, 2017 10:24:43 PM org.apache.openejb.config.ConfigurationFactory configureService
+INFORMACIÓN: Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+jun 18, 2017 10:24:44 PM org.apache.openejb.util.OptionsLog info
+INFORMACIÓN: Using 'openejb.system.apps=false'
+jun 18, 2017 10:24:44 PM org.apache.openejb.util.OptionsLog info
+INFORMACIÓN: Using 'openejb.deployments.classpath=false'
+jun 18, 2017 10:24:44 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating TransactionManager(id=Default Transaction Manager)
+jun 18, 2017 10:24:44 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating SecurityService(id=Tomcat Security Service)
+jun 18, 2017 10:24:44 PM org.apache.openejb.server.ServiceManager initServer
+INFORMACIÓN: Creating ServerService(id=cxf)
+jun 18, 2017 10:24:44 PM org.apache.openejb.server.ServiceManager initServer
+INFORMACIÓN: Creating ServerService(id=cxf-rs)
+jun 18, 2017 10:24:44 PM org.apache.openejb.server.SimpleServiceManager start
+INFORMACIÓN:   ** Bound Services **
+jun 18, 2017 10:24:44 PM org.apache.openejb.server.SimpleServiceManager printRow
+INFORMACIÓN:   NAME                 IP              PORT  
+jun 18, 2017 10:24:44 PM org.apache.openejb.server.SimpleServiceManager start
+INFORMACIÓN: -------
+jun 18, 2017 10:24:44 PM org.apache.openejb.server.SimpleServiceManager start
+INFORMACIÓN: Ready!
+jun 18, 2017 10:24:44 PM org.apache.catalina.startup.Catalina load
+INFORMACIÓN: Initialization processed in 4397 ms
+jun 18, 2017 10:24:44 PM org.apache.tomee.catalina.OpenEJBNamingContextListener bindResource
+INFORMACIÓN: Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+jun 18, 2017 10:24:44 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating Resource(id=UserDatabase)
+jun 18, 2017 10:24:44 PM org.apache.catalina.core.StandardService startInternal
+INFORMACIÓN: Arrancando servicio Catalina
+jun 18, 2017 10:24:44 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMACIÓN: Starting Servlet Engine: Apache Tomcat (TomEE)/7.0.55 (1.7.1)
+jun 18, 2017 10:24:44 PM org.apache.catalina.startup.HostConfig deployWAR
+INFORMACIÓN: Despliegue del archivo /home/islam/Escritorio/frasesCelebre3/target/apache-tomee/webapps/JSFMaven.war de la aplicación web
+jun 18, 2017 10:24:44 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFORMACIÓN: ------------------------- localhost -> /JSFMaven
+jun 18, 2017 10:24:44 PM org.apache.openejb.util.JarExtractor extract
+INFORMACIÓN: Extracting jar: /home/islam/Escritorio/frasesCelebre3/target/apache-tomee/webapps/JSFMaven.war
+jun 18, 2017 10:24:45 PM org.apache.openejb.util.JarExtractor extract
+INFORMACIÓN: Extracted path: /home/islam/Escritorio/frasesCelebre3/target/apache-tomee/webapps/JSFMaven
+jun 18, 2017 10:24:45 PM org.apache.openejb.util.OptionsLog info
+INFORMACIÓN: Using 'openejb.session.manager=org.apache.tomee.catalina.session.QuickSessionManager'
+jun 18, 2017 10:24:46 PM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFORMACIÓN: Configuring enterprise application: /home/islam/Escritorio/frasesCelebre3/target/apache-tomee/webapps/JSFMaven
+jun 18, 2017 10:24:48 PM org.apache.openejb.config.ConfigurationFactory configureService
+INFORMACIÓN: Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
+jun 18, 2017 10:24:48 PM org.apache.openejb.config.AutoConfig createContainer
+INFORMACIÓN: Auto-creating a container for bean JSFMaven.Comp1676806013: Container(type=MANAGED, id=Default Managed Container)
+jun 18, 2017 10:24:48 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFORMACIÓN: Creating Container(id=Default Managed Container)
+jun 18, 2017 10:24:48 PM org.apache.openejb.core.managed.SimplePassivater init
+INFORMACIÓN: Using directory /home/islam/Escritorio/frasesCelebre3/target/apache-tomee/temp for stateful session passivation
+jun 18, 2017 10:24:48 PM org.apache.openejb.config.AppInfoBuilder build
+INFORMACIÓN: Enterprise application "/home/islam/Escritorio/frasesCelebre3/target/apache-tomee/webapps/JSFMaven" loaded.
+jun 18, 2017 10:24:48 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFORMACIÓN: Assembling app: /home/islam/Escritorio/frasesCelebre3/target/apache-tomee/webapps/JSFMaven
+jun 18, 2017 10:24:48 PM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFORMACIÓN: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@35fc6dc4
+jun 18, 2017 10:24:48 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFORMACIÓN: OpenWebBeans Container is starting...
+jun 18, 2017 10:24:48 PM org.apache.webbeans.plugins.PluginLoader startUp
+INFORMACIÓN: Adding OpenWebBeansPlugin : [CdiPlugin]
+jun 18, 2017 10:24:48 PM org.apache.webbeans.plugins.PluginLoader startUp
+INFORMACIÓN: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+jun 18, 2017 10:24:48 PM org.apache.webbeans.config.BeansDeployer validateInjectionPoints
+INFORMACIÓN: All injection points were validated successfully.
+jun 18, 2017 10:24:48 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFORMACIÓN: OpenWebBeans Container has started, it took 353 ms.
+jun 18, 2017 10:24:48 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFORMACIÓN: Deployed Application(path=/home/islam/Escritorio/frasesCelebre3/target/apache-tomee/webapps/JSFMaven)
+jun 18, 2017 10:24:50 PM com.sun.faces.config.ConfigureListener contextInitialized
+INFORMACIÓN: Inicializando Mojarra 2.2.9 (-SNAPSHOT 20141218-0939 https://svn.java.net/svn/mojarra~svn/tags/2.2.9@14083) para el contexto '/JSFMaven'
+jun 18, 2017 10:24:51 PM org.primefaces.webapp.PostConstructApplicationEventListener processEvent
+INFORMACIÓN: Running on PrimeFaces 5.3
+jun 18, 2017 10:24:52 PM org.apache.catalina.startup.HostConfig deployWAR
+INFORMACIÓN: Deployment of web application archive /home/islam/Escritorio/frasesCelebre3/target/apache-tomee/webapps/JSFMaven.war has finished in 7.152 ms
+jun 18, 2017 10:24:52 PM org.apache.coyote.AbstractProtocol start
+INFORMACIÓN: Starting ProtocolHandler ["ajp-bio-8009"]
+jun 18, 2017 10:24:52 PM org.apache.catalina.startup.Catalina start
+INFORMACIÓN: Server startup in 7328 ms
+jun 18, 2017 10:24:52 PM org.apache.catalina.core.StandardServer await
+GRAVE: StandardServer.await: create[localhost:8005]: 
+java.net.BindException: La dirección ya se está usando (Bind failed)
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:427)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:777)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:723)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:321)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+jun 18, 2017 10:24:52 PM org.apache.coyote.AbstractProtocol pause
+INFORMACIÓN: Pausing ProtocolHandler ["http-bio-8080"]
+jun 18, 2017 10:24:52 PM org.apache.coyote.AbstractProtocol pause
+INFORMACIÓN: Pausing ProtocolHandler ["ajp-bio-8009"]
+jun 18, 2017 10:24:52 PM org.apache.catalina.core.StandardService stopInternal
+INFORMACIÓN: Parando servicio Catalina
+jun 18, 2017 10:24:52 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFORMACIÓN: Undeploying app: /home/islam/Escritorio/frasesCelebre3/target/apache-tomee/webapps/JSFMaven
+jun 18, 2017 10:24:52 PM org.apache.coyote.AbstractProtocol stop
+INFORMACIÓN: Stopping ProtocolHandler ["ajp-bio-8009"]
+jun 18, 2017 10:24:52 PM org.apache.openejb.server.SimpleServiceManager stop
+INFORMACIÓN: Stopping server services
+jun 18, 2017 10:24:52 PM org.apache.coyote.AbstractProtocol stop
+INFORMACIÓN: Stopping ProtocolHandler ["http-bio-8080"]
+jun 18, 2017 10:24:52 PM org.apache.coyote.AbstractProtocol destroy
+INFORMACIÓN: Destroying ProtocolHandler ["http-bio-8080"]
+jun 18, 2017 10:24:52 PM org.apache.coyote.AbstractProtocol destroy
+INFORMACIÓN: Destroying ProtocolHandler ["ajp-bio-8009"]

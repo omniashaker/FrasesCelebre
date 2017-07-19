@@ -1,0 +1,17 @@
+create database frases_celebres3;
+	use frases_celebres3;
+
+	create table autores (id_autor int primary key not null auto_increment, nombre_completo varchar(50), fecha_nac varchar(50);
+	
+	create table frases (id_frase int primary key not null auto_increment, descripcion text, categoria varchar(20), id_autor int, foreign key (id_autor) references autores (id_autor));
+
+	insert into autores values (1,'Albert Einstein', '1920-06-20');
+	insert into autores values (2,'Rubén Darío', '1930-09-12');
+	insert into autores values (3,'Steve Jobs', '1964-02-19');
+	
+	insert into frases values (1, 'Estoy convencido de que la mitad de lo que separa a los emprendedores exitosos de los que no triunfan es la perseverancia.', 'perseverancia', 3);
+	insert into frases values (2, 'Ser el hombre más rico en el cementerio no me importa… Ir a la cama por la noche diciendo que hemos hecho algo maravilloso… Eso es lo que me importa.', 'ilusiones', 3);
+	insert into frases values (3, 'Generalmente, los hombres risueños son sanos de corazón. La risa es la sal de la vida; la risa de un niño es como la loca música de la infancia.', 'risas', 2);
+	insert into frases values (4, 'No dejes apagar el entusiasmo, virtud tan valiosa como necesaria; trabaja, aspira, tiende siempre hacia la altura.', 'entusiasmo', 2);
+	insert into frases values (5, 'El que no posee el don de maravillarse ni de entusiasmarse más le valdría estar muerto, porque sus ojos están cerrados.', 'entusiasmo', 1);
+	insert into frases values (6, 'Tendremos el destino que nos hayamos merecido.', 'destino', 1);
